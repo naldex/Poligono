@@ -13,7 +13,10 @@ public class Ponto {
 
     private Double x;
     private Double y;
-
+    public Ponto (Double x, Double y) {
+        this.x = x;
+        this.y = y;
+    }
     public String getlocalizacao() {
 
         if (x > 0 && y > 0) {
@@ -45,8 +48,5 @@ public class Ponto {
         }
     }
     
-    public Ponto (Double x, Double y) {
-        this.x = x;
-        this.y = y;
-    }
+
 }
