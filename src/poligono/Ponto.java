@@ -13,10 +13,17 @@ public class Ponto {
 
     private Double x;
     private Double y;
-    public Ponto (Double x, Double y) {
+
+    public Ponto(Double x, Double y) {
         this.x = x;
         this.y = y;
     }
+   
+    public Ponto () {
+        this.x=0.0;
+        this.y=0.0;
+}
+    
     public String getlocalizacao() {
 
         if (x > 0 && y > 0) {
@@ -32,7 +39,7 @@ public class Ponto {
                         return "4º Quadrante";
                     } else {
                         if (x == 0 && y == 0) {
-                            return "Origem";
+                            return "Ponto de Origem";
                         } else {
                             if (x == 0 && y != 0) {
                                 return "Eixo de Y";
@@ -47,6 +54,9 @@ public class Ponto {
 
         }
     }
-    
 
+    public Double getDistancia(Ponto p) {
+       return Math.sqrt (Math.pow(p.x-this.x,2)+Math.pow(p.y-this.y,2));
+        
+    }
 }
